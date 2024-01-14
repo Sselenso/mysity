@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/*Перевод в друшие величины*/
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:visited {
+  color: var(--foregroundAction);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--foregroundAccent);
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: raleway-c;
+  src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+  font-family: outfit-c;
+  src: url(../fonts/outfit-regular.woff2);
+}
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: outfit-c;
+}
+
+:root {
+  --color-green: #6fb316;
+  --color-black: #273035;
+  --color-white: #fafafa;
+  --font: "Roboto", sans-serif;
+  --index: calc(1vw + 1vh);
+  --gap: calc(var(--index) * 4.5);
+  --gallery-gap: calc(var(--index) * 7.5) ;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-green);
+}
+
+.main__title, .header__logo, .tarif__left, .tarif__right {
+  will-change: transform;
+}
+
+body {
+  font-family: var(--font);
+  background-image: url("../img/bg.jpg");
+  background-size: 3.125rem;
+  color: var(--color-white);
+  overflow-x: hidden;
+}
+
+.main__header {
+  height: 100vh;
+}
+
+.container {
+  padding: 0 10vw;
+}
+
+.head__nav {
+  position: sticky;
+  top: 0;
+}
+
+.head__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.875rem;
+  padding: 1.25rem;
+}
+
+.head__nav-link {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.header__logo {
+  width: calc(var(--index) * 25);
+  position: absolute;
+  right: 10vw;
+  top: 10vh;
+  z-index: -1;
+}
+
+.main__title {
+  font-size: calc(var(--index) * 4);
+  position: absolute;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  top: 30vh;
+}
+
+.green-letter {
+  color: var(--color-green);
+}
+
+.gallery {
+  font-family: var(--font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: calc(var(--index) * 8) 0;
+}
+
+.gallery > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery__item {
+  max-width: calc(var(--index) * 21);
+  margin-bottom: calc(var(--gallery-gap) * 1);
+  max-height: 180vh;
+  border-radius: 8px;
+}
+
+.gallery__left {
+  margin-top: calc(var(--gallery-gap) * 1.75);
+}
+
+.gallery__right .gallery__item {
+  margin: 0;
+  margin-top: var(--gallery-gap);
+}
+
+.text-block {
+  color: var(--color-text);
+  position: relative;
+}
+
+.text-block__h {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--color-header);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.text-block__p {
+  line-height: 1.75;
+  font-size: 1.25rem;
+}
+
+.p-1 {
+  margin-bottom: var(--gallery-gap);
+}
+
+.tarif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: calc(var(--index) * 5) 0;
+}
+
+.tarif > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tarif__sale-block {
+  margin-top: calc(var(--gap) * 2);
+  max-width: calc(var(--index) * 55 - 5%);
+  background-color: #191919;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+}
+
+.tarif__sale-block-main {
+  background-position: center;
+  height: 18.75rem;
+  background-image: url("../img/4000x455_XS09.webp");
+  background-size: cover;
+  border-radius: 0.3125rem;
+}
+
+.sale-block-main-text {
+  position: absolute;
+  top: 5vh;
+  left: 3vw;
+  max-width: calc(var(--index) * 15 - 5%);
+  padding: 0.625rem;
+  margin: 0.625rem;
+  background-color: var(--color-black);
+  border-radius: 0.3125rem;
+}
+
+.text-block {
+  margin-bottom: 0.9375rem;
+}
+
+.connect-btn {
+  font-size: 1.25rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  color: var(--color-white);
+  background-color: var(--color-green);
+}
+
+.tarif__left {
+  margin-top: calc(var(--gap) * 1);
+  border-right: 1px solid var(--color-green);
+}
+
+.tarif__title {
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--gap) * 0.4);
+}
+
+.tarif-block {
+  max-width: calc(var(--index) * 25 - 5%);
+  margin-bottom: var(--gap);
+  background-color: #191919;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+}
+
+.tarif-block-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.tarif-block-header-title {
+  font-size: 1.25rem;
+  color: var(--color-green);
+}
+
+.tarif-logo {
+  width: 3.75rem;
+}
+
+.tarif-block-main-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tarif-block-footer {
+  padding: 0.625rem 0;
+}
+
+.tarif-block-footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
